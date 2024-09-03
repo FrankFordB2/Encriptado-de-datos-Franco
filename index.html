@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptacion de datos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body >
+    
+    <div id="bodycompleto">
+   
+    <div id="modalventana" class="ventanamodal">
+        <div class="ventanamodal_interior">
+            <div class="cerrarmodalventana">
+                <button id="cerrarmodal" onclick="cerrarmodal()">&times; </button>
+                <p> Error 209</p>
+            </div>
+            <h3 id="noHayTexto"><img src="Imagenes\errornuevo.png" /> Debes ingresar un texto, <br> intentalo
+                nuevamente!</h3>
+            <button id="intentar_modal" onclick="cerrarmodal()">Intentar</button>
+        </div>
+    </div>
+    <div class="caja_master">
+
+        <p id="mensaje1"></p>
+        <div class="ventana_master">
+
+            <div class="ventana_master_imagen">
+                <a href="https://www.aluracursos.com/" target="_blank"><img src="Imagenes/Logo.png"
+                        alt="iconoalura" /></a>
+                <div class="reset_icono_info">
+                    <button class="boton_reset" id="reset" onclick="reset()"> Resetear</button>
+                    <button class="boton_info" id="boton_ayuda_id" onclick="boton_ayuda()"><img src="Imagenes\informacion.png"
+                            alt="informacion"></button>
+                </div>
+                <div id="lista_ayuda1" class="lista_de_ayuda">
+                    <p>
+                        <li>✔︎ Escribe un texto en el campo "ingrese un texto aquí."</li>
+                        <li>✔︎ Si el texto que ingresaste no esta encriptado, presiona encriptar.</li>
+                        <li>✔︎ Si el texto que ingresaste esta encriptado, presiona desencriptar. </li>
+                        <li>✔︎ para desencriptar es necesario copiar el texto y luego ingresarlo en el campo "ingrese un
+                            texto aquí."</li>
+                        <li>✔︎ Error 209: No entendiste nada.</li>
+                    </p>
+                </div>
+            </div>
+            <div class="ventana_master_texto_botones">
+                <div class="textareaypegar">
+                    <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10"
+                        placeholder="ingrese un texto aquí..."></textarea>
+                    <button class="botonpegar" title="Pegar" id="pegar" onclick="btnpegar()"><i
+                            class="fa-regular fa-paste"></i></button>
+                </div>
+                <div class="ventana_botones_principal">
+                    <div class="ventana_parrafo_botones">
+                        <p class="ventana_botones_parrafo_letra">👁️‍🗨️ Solo letras minúsculas y sin acentos.</p>
+                    </div>
+                    <div class="ventana_botones_master">
+                        <button class="ventana_botones" id="btnEncriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="ventana_botones1" id="boton_desencriptar"
+                            onclick="btndesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ventana_subventana">
+                <textarea class="ventana_subventana_textarea2" id="desencritarTexto" cols="20" rows="10"
+                    readonly></textarea>
+                <h3 id="textoTitulo">Ningún mensaje fue encontrado</h3>
+                <p class="ventana_subventana_p" id="TextoParrafo">Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+                <div class="tex_copiar">
+                    <button id="botoncopiar" class="ventana_subventana_copiar" onclick="btncopiar()">Copiar</button>
+                    <p id="mensajecopiado"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/franco-burgoa-4a338514b" target="_blank">Desarrollado por Franco
+                Burgoa</a>
+        </div>
+    </footer>
+    <script src="js.js"></script>
+</div>
+</body>
+
+</html>
